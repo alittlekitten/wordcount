@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<br>
+    <div class="container">
+        <form action='{% url "send" %}'>
+            제목:<br><input type="text" name="title">
+            <br>
+            <br>
+            본문:<br><textarea cols="40" rows="10" name="body"></textarea>
+            <br>
+            <input type="submit" value="제출하기">
+        </form>
+    </div>
+
+{% endblock %}

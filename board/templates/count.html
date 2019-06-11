@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+    <br>
+    <h3 style="color:brown; font-family:'굴림'; font-weight:bold;">당신이 입력한 텍스트는 <!--총단어수--> 단어로 구성되어 있습니다.</h3><br>
+
+
+    <h5>입력한 텍스트: </h5>
+    {{ fulltext }}
+    <br><br>
+    <!-- 입력받은 전체 텍스트 -->
+
+    <h5>총 단어 카운트:</h5>
+        {{ total }}
+        <br><br>
+
+    <h5>단어 카운트:</h5>
+        {% for word, countTotal in dictionary %}
+        {{ word }} - {{ countTotal }}
+        
+        {% endfor %}
+    <!-- '단어' - '단어나온 횟수' -->
+    <br>
+    <a href="{% url 'home' %}"><button type="button" class="btn btn-primary">다시하기</button></a><br><br>
+
+{% endblock %}

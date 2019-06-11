@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+    <br>
+    <h1 style="color:royalblue;font-family:'돋움';font-weight:bold;">게시판의 글이다 이자시가!!!</h1>
+    <br>
+    {% for i in boards.all %}
+        <div class="card">
+            <div class="card-body">
+                <h3 calss="card-title"><a href="{% url 'detail' i.id %}">{{ i.title }}</a></h3>
+                <h6 class="card-subtitle mb-2 text-muted">{{ i.pub_date }}</h6>
+                </p>
+            </div>
+        </div>
+        <br>
+    {% endfor %}
+
+    <a href="{% url 'home' %}"><button type="button" class="btn btn-info">글자수 세러 가자!</button></a>
+    <a href="{% url 'write' %}"><button type="button" class="btn btn-dark">글쓰는 페이지로 가자!</button></a>
+
+{% endblock %}

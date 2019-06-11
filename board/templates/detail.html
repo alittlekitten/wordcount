@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container jumbotron">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">{{boardNumb.title}}</h2>
+                <p class="card-subtitle mb-2 test-muted">{{boardNumb.pub_date}}</p>
+                <p class="card-text">{{boardNumb.body}}</p>
+
+<a href="{% url 'check' %}" class=''>루트페이지로 가자!</a>
+
+{% endblock %}

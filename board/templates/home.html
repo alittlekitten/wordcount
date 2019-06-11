@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+    <h3 style="color:purple;font-family:'굴림';font-weight:bold;">글자수 세고싶어?</h3><br>
+    <form action="{% url 'count' %}">
+        <textarea cols='40' rows='10' name='fulltext'></textarea>
+        <br><br>
+        <input type="submit" class="btn btn-secondary" value="글자수세기!">
+    </form><br>
+    <a href="{% url 'check' %}"><button type="button" class="btn btn-success">게시판으로 가기</button></a>
+
+{% endblock %}
